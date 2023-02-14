@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-atribuição</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            font-weight: 500;
+            padding: 0px 0px 0px 20px;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        html{
+            width: 100vw;
+            height: 100vh;
+        }
+
+        header{
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            margin-left: -30px;
+        }
+
+        header a:hover{
+            background: #91eba480;
+            border-radius: 4px;
+            transition: .3s;
+            padding: 6px;
+        }
+
+        header .autoat{
+            background: #91eba480;
+            border-radius: 4px;
+            padding: 6px;
+        }
+
+        header ul{
+            padding-left: 25px;
+        }
+
+        header li{
+            display: inline;
+        }
+        
+        header a{
+            color: #ceecd4;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 600;
+            padding: 6px;
+        }
+
+        h1{
+            text-align: center;
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0px;
+        }
+
+        div.preced{
+            background-color: #256d33;
+            color: white;
+            width: 88%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 15px;
+            padding-left: 40px;
+            padding-right: 20px;
+            line-height: 1.7em;
+            font-size: 1.2em;
+        }
+        
+        div.artigo{
+            width: 88%;
+            border-radius: 5px;
+            padding:5px 20px 5px 40px;
+            margin-bottom: 10px;
+            background-color: #a1d8ac;
+            line-height: 1.7em;
+        }
+
+        .artigo p{
+            font-family: Arial;        
+            list-style: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="ex005.html">Operadores Aritméticos</a></li>
+            <li><a class="autoat" href="ex005-pg2.html">Auto-atribuição</a></li>
+            <li></li>
+        </ul>
+    </header>
+    <h1>Auto-atribuição em JavaScript</h1>
+    <div class="preced">
+        <p>var n = 3 <br>
+        n = n = 4</p>
+        <br>
+        Inicialmente, definiu-se a VAR chamada n com o valor 3. <br>
+        Na segunda linha de código, houve uma <ins>auto-atribuição</ins>:
+        <p>
+        <p>A variável n passou a valer o seu valor inicial (3) somado a 4, <strong>agora vale 7</strong>!</p>
+    </div>
+    <div class="artigo">
+        <p>É possível simplificar uma auto-atribuição:</p>
+        <ul>
+            <li> [ n = n + 4 ] pode ser escrito n <strong>+=</strong> 4</li>
+            <li> [ n = n - 5 ] pode ser escrito n <strong>-=</strong> 5</li>
+            <li> [ n = n * 6 ] pode ser escrito n <strong>*=</strong> 6 </li>
+            <li> [ n = n / 7 ] pode ser escrito n <strong>/=</strong> 7 </li>
+            <li> [ n = n % 8 ] pode ser escrito n <strong>%=</strong> 8 </li>
+            <li> [ n = n ** 9 ] pode ser escrito n <strong>**=</strong> 9 </li>
+        </ul>
+    </div>
+  <script type="text/javascript" src="ex005-pag_2.js"></script>  
+
+</body>
+</html>
