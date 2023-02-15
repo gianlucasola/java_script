@@ -30,14 +30,14 @@
         }
 
         header a:hover{
-            background: #91eba480;
+            background: #f7bdc8ab;
             border-radius: 4px;
             transition: .3s;
             padding: 6px;
         }
 
-        header .autoat{
-            background: #91eba480;
+        header .relaci{
+            background: #f7bdc8ab;
             border-radius: 4px;
             padding: 6px;
         }
@@ -66,7 +66,7 @@
         }
 
         div.preced{
-            background-color: #256d33;
+            background-color: #CC5A71;
             color: white;
             width: 88%;
             border-radius: 5px;
@@ -83,28 +83,24 @@
             border-radius: 5px;
             padding:5px 20px 5px 40px;
             margin-bottom: 10px;
-            background-color: #7aec90;
+            background-color: #42cbd4;
             line-height: 1.7em;
         }
-
-        .artigo p{
+        
+        .artigo li{
             font-family: Arial;        
             list-style: none;
             font-weight: 500;
+            line-height: 30px;
         }
 
-        div.increm{
+        .exemplos{
             width: 88%;
             border-radius: 5px;
             padding:5px 20px 5px 40px;
             margin-bottom: 20px;
-            background-color: #9ee7ad;
+            background-color: #f0aebb;
             line-height: 1.7em;
-        }
-
-        .obs{
-            text-indent: 73px;
-            margin-top: 30px;
         }
     </style>
 </head>
@@ -113,41 +109,53 @@
     <header>
         <ul>
             <li><a href="../pagina1/pg1.html">Operadores Aritméticos</a></li>
-            <li><a class="autoat" href="pg2.html">Auto-atribuição e incremento</a></li>
-            <li><a href="../pagina3/pg3.html">Operadores Relacionais</a></li>
+            <li><a href="../pagina2/pg2.html">Auto-atribuição e incremento</a></li>
+            <li><a class="relaci" href="pg3.html">Operadores Relacionais</a></li>
         </ul>
     </header>
-    <h1>Auto-atribuição e Incremento em JavaScript</h1>
+
+    <h1>Operadores Relacionais em JavaScript</h1>
+
     <div class="preced">
-        <p>var n = 3 <br>
-        n = n = 4</p>
-        <br>
-        Inicialmente, definiu-se a VAR chamada n com o valor 3. <br>
-        Na segunda linha de código, houve uma <ins>auto-atribuição</ins>:
-        <p>
-        <p>A variável n passou a valer o seu valor inicial (3) somado a 4, <strong>agora vale 7</strong>!</p>
-    </div>
-    <div class="artigo">
-        <p>É possível simplificar uma auto-atribuição:</p>
-        <ul>
-            <li> [ n = n + 4 ] pode ser escrito n <strong>+=</strong> 4</li>
-            <li> [ n = n - 5 ] pode ser escrito n <strong>-=</strong> 5</li>
-            <li> [ n = n * 6 ] pode ser escrito n <strong>*=</strong> 6 </li>
-            <li> [ n = n / 7 ] pode ser escrito n <strong>/=</strong> 7 </li>
-            <li> [ n = n % 8 ] pode ser escrito n <strong>%=</strong> 8 </li>
-            <li> [ n = n ** 9 ] pode ser escrito n <strong>**=</strong> 9 </li>
+        <ul class="artigo">
+            <li>> significa "MAIOR QUE";</li>
+            <li>< significa "MENOR QUE";</li>
+            <li>>= significa "MAIOR OU IGUAL QUE";</li>
+            <li><= significa "MENOR OU IGUAL QUE";</li>
+            <li>== significa "IGUAL A";</li>
+            <li>=== significa "IDÊNTICO A";</li>
+            <li>!= significa "DESIGUAL (DIFERENTE)".</li>
         </ul>
     </div>
-    <div class="increm">
-        <p>
-            Além da auto-atribuição, podemos usar símbolos para representar <em>decremento</em> ou <em>incremento</em>:
-        </p>
-        <p>- Supondo que definimos: <ins><strong>var n = 4</strong></ins></p>
-        <p><strong>[ n++ ]*</strong>, os dois + significam que a variável n será acrescida a um, passando ao valor de 5;</p>
-        <p><strong>[ n-- ]*</strong>, os dois - significam que a variável n será diminuída em um, passando ao valor de 4 (já que o n++ havia passado seu valor para cinco).</p>
-        <p class="obs">*Com os sinais após o nome da variável (n++ ou n--), a mudança no valor não é exibida imediatamente, tendo que "chamar" a variável para notar a alteração.</p>
+
+    <div class="exemplos">
+        <p>Relacionais são como comparações, e retornam <ins>true</ins> ou <ins>false</ins>.</p>
+        <ul>
+            <li>3 > 7 = false</li>
+            <li>4 < 8 = true</li>
+            <li>5 >= 6 = false</li>
+            <li>6 <= 9 = true</li>
+            <li>7 == '7' = true [porque '==' aceita "comparação" entre number e string]</li>
+            <li>8 === '8' = false ['===' precisa que seja o mesmo valor E o mesmo tipo de dado]</li>
+            <li>9 != 10 = true [porque nove é desigual a dez]</li> 
+        </ul>    
     </div>
-  <script type="text/javascript" src="pag2.js"></script>  
+
+
+
+
+
+    <div class="increm">
+        
+
+
+    </div>
+
+
+
+
+
+  <script type="text/javascript" src="pag3.js"></script>  
 
 </body>
 </html>
