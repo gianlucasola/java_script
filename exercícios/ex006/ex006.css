@@ -42,6 +42,10 @@ li:hover{
     cursor: pointer;
 }
 
+menu.minas{
+    display: none;
+}
+
 menu.minas > p {
     display: block;
     text-align: center;
@@ -52,6 +56,11 @@ menu.minas > p {
     padding: 10px 0px;
     margin: 0;
 }
+
+menu.rio{
+    display: none;
+}
+
 
 menu.rio > p {
     display: block;
@@ -64,6 +73,11 @@ menu.rio > p {
     margin: 0;
 }
 
+menu.rigra{
+    display: none;
+}
+
+
 menu.rigra > p {
     display: block;
     text-align: center;
@@ -74,6 +88,11 @@ menu.rigra > p {
     padding: 10px 0px;
     margin: 0;
 }
+
+menu.sampa{
+    display: none;
+}
+
 
 menu.sampa > p {
     display: block;
