@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praticando Hamburguinho</title>
+    <link rel="stylesheet" href="ex006.css">
+</head>
+
+<body>
+    <header>
+        <h1>Times por Estado</h1>
+        <ul>
+            <li onclick="clickMinas()">Minas Gerais</li>
+            <li onclick="clickRio()">Rio de Janeiro</li>  <!--  quando clicar no texto "Rio de Janeiro" irá executar a função chamada "clickRio()" COM PARÊNTESES  -->
+            <li onclick="clickRigra()">Rio Grande do Sul</li>
+            <li onclick="clickSampa()">São Paulo</li>
+        </ul>
+        <menu id="timesminas" class="minas">
+            <p>América</p>
+            <p>Atlético</p>
+            <p>Cruzeiro</p>
+            <p>Tombense</p>
+        </menu>
+        <menu id="timesrio" class="rio">  <!--  o menu de ID timesrio sofrerá a ação executada pela função clickRio() -->
+            <p>Botafogo</p>
+            <p>Flamengo</p>
+            <p>Fluminense</p>
+            <p>Vasco</p>
+        </menu>
+        <menu id="timesrigra" class="rigra">
+            <p>Caxias</p>
+            <p>Internacional</p>
+            <p>Grêmio</p>
+            <p>Juventude</p>
+        </menu>
+        <menu id="timessampa" class="sampa">
+            <p>Corinthians</p>
+            <p>Palmeiras</p>
+            <p>São Paulo</p>
+            <p>Santos</p>
+        </menu>
+    </header>
+
+
+    <script>
+        function clickMinas(){
+            if(timesminas.style.display == 'block'){
+                timesminas.style.display = 'none'
+            }   else{
+                    timesminas.style.display = 'block'
+                }
+        }
+
+        function clickRio(){                             /*    "iniciando a escrita" da função chamada clickRio(){     */
+            if(timesrio.style.display == 'block'){       /*    Se (o menu de ID timesRio estiver com display 'block'){    */
+                timesrio.style.display = 'none'          /*    o próprio menu de ID timesRio vai ser display 'none' (ficar "escondido")     */
+            }   else{                                    /*    } se não{    */
+                    timesrio.style.display = 'block'     /*    o próprio menu de ID timesRio vai ser display 'block'     */
+            }                                            /*    }    */
+        }
+
+        function clickRigra(){
+            if(timesrigra.style.display == 'block'){
+                timesrigra.style.display = 'none'
+            }   else{
+                    timesrigra.style.display = 'block'
+            }
+        }
+
+        function clickSampa(){
+            if(timessampa.style.display == 'block'){
+                timessampa.style.display = 'none'
+            }   else{
+                    timessampa.style.display = 'block'
+            }
+        }
+
+    </script>
+</body>
+</html>
