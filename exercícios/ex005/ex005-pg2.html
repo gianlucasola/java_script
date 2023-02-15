@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto-atribuição</title>
+    <title>Auto-atribuição e incremento</title>
     <style>
         body{
             font-family: Arial, sans-serif;
@@ -83,7 +83,7 @@
             border-radius: 5px;
             padding:5px 20px 5px 40px;
             margin-bottom: 10px;
-            background-color: #a1d8ac;
+            background-color: #7aec90;
             line-height: 1.7em;
         }
 
@@ -92,18 +92,32 @@
             list-style: none;
             font-weight: 500;
         }
+
+        div.increm{
+            width: 88%;
+            border-radius: 5px;
+            padding:5px 20px 5px 40px;
+            margin-bottom: 20px;
+            background-color: #9ee7ad;
+            line-height: 1.7em;
+        }
+
+        .obs{
+            text-indent: 73px;
+            margin-top: 30px;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <ul>
-            <li><a href="ex005.html">Operadores Aritméticos</a></li>
-            <li><a class="autoat" href="ex005-pg2.html">Auto-atribuição</a></li>
+            <li><a href="ex005-pg1.html">Operadores Aritméticos</a></li>
+            <li><a class="autoat" href="ex005-pg2.html">Auto-atribuição e incremento</a></li>
             <li></li>
         </ul>
     </header>
-    <h1>Auto-atribuição em JavaScript</h1>
+    <h1>Auto-atribuição e Incremento em JavaScript</h1>
     <div class="preced">
         <p>var n = 3 <br>
         n = n = 4</p>
@@ -123,6 +137,15 @@
             <li> [ n = n % 8 ] pode ser escrito n <strong>%=</strong> 8 </li>
             <li> [ n = n ** 9 ] pode ser escrito n <strong>**=</strong> 9 </li>
         </ul>
+    </div>
+    <div class="increm">
+        <p>
+            Além da auto-atribuição, podemos usar símbolos para representar <em>decremento</em> ou <em>incremento</em>:
+        </p>
+        <p>- Supondo que definimos: <ins><strong>var n = 4</strong></ins></p>
+        <p><strong>[ n++ ]*</strong>, os dois + significam que a variável n será acrescida a um, passando ao valor de 5;</p>
+        <p><strong>[ n-- ]*</strong>, os dois - significam que a variável n será diminuída em um, passando ao valor de 4 (já que o n++ havia passado seu valor para cinco).</p>
+        <p class="obs">*Com os sinais após o nome da variável (n++ ou n--), a mudança no valor não é exibida imediatamente, tendo que "chamar" a variável para notar a alteração.</p>
     </div>
   <script type="text/javascript" src="ex005-pag_2.js"></script>  
 
