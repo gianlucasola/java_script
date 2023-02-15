@@ -30,14 +30,14 @@
         }
 
         header a:hover{
-            background: #86cef0ab;
+            background: #f18f4da8;
             border-radius: 4px;
             transition: .3s;
             padding: 6px;
         }
 
-        header .lgc{
-            background: #86cef0ab;
+        header .tern{
+            background: #f18f4da8;
             border-radius: 4px;
             padding: 6px;
         }
@@ -66,7 +66,7 @@
         }
 
         div.preced{
-            background-color: #196a8f;
+            background-color: #d8671b;
             color: white;
             width: 88%;
             border-radius: 5px;
@@ -87,12 +87,13 @@
             border-radius: 5px;
             padding:5px 20px 5px 40px;
             margin-bottom: 20px;
-            background-color: #96cce6;
+            background-color: #f3c7a9;
             line-height: 1.7em;
         }
 
-        p.space{
-            margin-top: 50px;
+        .pindent{
+            text-indent: 30px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -103,45 +104,27 @@
             <li><a href="../pagina1/pg1.html">Operadores Aritméticos</a></li>
             <li><a href="../pagina2/pg2.html">Auto-atribuição e incremento</a></li>
             <li><a href="../pagina3/pg3.html">Operadores Relacionais</a></li>
-            <li><a class="lgc" href="pg4.html">Operadores Lógicos</a></li>
-            <li><a href="../pagina5/pg5.html">Ternário</a></li>
+            <li><a href="../pagina4/pg4.html">Operadores Lógicos</a></li>
+            <li><a class="tern" href="../pagina5/pg5.html">Ternário</a></li>
         </ul>
     </header>
 
-    <h1>Operadores Lógicos em JavaScript</h1>
+    <h1>Ternário em JavaScript</h1>
 
     <div class="preced">
-        <p>Nesta ordem de precedência:</p>
-        <ul class="artigo">
-            <li>! significa NEGAÇÃO;</li>
-            <li>&& significa CONJUNÇÃO;</li>
-            <li>|| significa DISJUNÇÃO.</li>
-        </ul>
+        <p>Funciona como a função SE do excel:</p>
+        <p>teste lógico <strong>?</strong> true <strong>:</strong> false</p>
+        
     </div>
 
     <div class="exemplos">
-        <p><strong>Negação:</strong></p>
-        <ul>
-            <li>! true (não é verdadeiro)</li>
-            <li>! false (não é falso)</li>
-        </ul>
-        <p class="space"><strong>Conjunção (precisa que <ins>as duas condições</ins> sejam verdadeiras):</strong></p>
-        <ul>
-            <li>true && true = TRUE</li>
-            <li>true && false = FALSE</li>
-            <li>false && true = FALSE</li>
-            <li>false && false = FALSE</li>
-        </ul>
-        <p class="space"><strong>Disjunção (basta que <ins>uma condição</ins> seja verdadeira):</strong></p>
-        <ul>
-            <li>true || true = TRUE</li>
-            <li>true || false = TRUE</li>
-            <li>false || true = TRUE</li>
-            <li>false || false = FALSE</li>
-        </ul>
+        <p><strong>Por exemplo:</strong></p>
+        <p>var n1 = 5</p>
+        <p>n1 > 4 ? 'maior' : 'menor'</p>
+        <p class="pindent">^--- se n1 for maior que 4, retorna "maior", se não "menor"</p>
     </div>
 
-  <script type="text/javascript" src="pag4.js"></script>  
+  <script type="text/javascript" src="pag5.js"></script>  
 
 </body>
 </html>
