@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(68, 125, 199);
+            color: white;
+            font: normal 14pt Arial;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 class="titulo">Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <p id="clique">Clique em mim!</p>
+
+    <script>
+            document.write('(Texto adicionado via JS)')  /*  escrever no documento: "(Texto adicionado via JS)"  */
+
+
+
+
+            /* vv  var de nome P1 se refere ao elemento de tag <p> ordem [0], o primeiro parágrafo   vv*/
+            var p1 = document.getElementsByTagName('p')[0]
+
+            p1.style.color = 'yellow'
+            /* ^^  o estilo de cor do p1 (var nome p1 se referindo ao primeiro parágrafo) se torna YELLOW ^^ */
+
+
+
+
+            var corpo = document.body  /*  var de nome corpo se refere ao body do html  */
+            corpo.style.background = 'green'  /*  cor do background da var corpo (body html) se torna verde  */
+
+
+
+
+            var click = document.getElementById('clique') /*  var de nome click se refere ao elemento de ID 'clique' (um <p> do html)  */
+            click.style.color = 'cyan'  /*  o estilo de cor da var CLICK se torna ciano  */
+
+
+
+
+            var title = document.querySelector('.titulo')  /*  var de nome title se refere a um seletor: classe (representada por PONTO, como no css) "titulo"  */
+            title.style.background = 'magenta'  /*  var de nome title recebe background de cor magenta  */
+    </script>
+</body>
+</html>
