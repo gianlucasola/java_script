@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        *{
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 18pt;
+            font-weight: 600;
+            position: relative;
+        }
+        
+        #area{
+            background-color: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="area" onclick="clic()" onmouseenter="entrou()" onmouseleave="saiu()">  <!--  quando clicar e quando o mouse entrar, executa a função chamada CLIC  -->
+        Clique em mim
+    </div>    
+</body>
+    <script>
+
+        /*
+        EVENTOS DE MOUSE mais comuns:
+            -mouseenter: quando o mouse estiver em cima
+            -mousemove: quando mover o mouse no elemento
+            -mousedown: quando estiver clicado
+            -mouseup: quando desclicar
+            -click: quando clicar ("ciclo rápido de clique")
+            -mouseout: quando o mouse sair "de cima" do elemento
+        */
+
+
+       var a = document.getElementById('area')  /*  var de nome A se refere ao elemento de id AREA (a div verde)  */
+            function clic(){  /*  criando a função chamada CLIC  */
+            a.innerText = 'Clicou!'  /*  quando clicar, a var de nome a (a div) receberá como texto: "Clicou!"  */
+            a.style.background = 'red'
+            }
+
+            function entrou(){  /*  definindo função para quando o mouse entrar na div  */
+                a.innerText = 'Entrou!'  /*  receberá como texto: "Entrou!"  */
+                a.style.background = 'orange'  /*  receberá bg-color: laranja  */
+            }
+
+            function saiu(){  /*  definindo função para quando o mouse sair  */
+                a.innerText = 'Clique em mim'  /*  recebe este texto  */
+                a.style.background = 'green'  /*  recebe cor de fundo verde  */
+            }
+
+    </script>
+</html>
