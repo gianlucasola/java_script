@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+
+<body>
+    <h1>Sistema de Multas</h1>
+    <label for="ivel">Velocidade do veículo:</label>
+    <input type="number" name="vel" id="ivel"> km/h
+    <input type="button" value="Consultar" onclick="calcular()">
+    <div id="res"></div>
+</body>
+
+    <script>
+        function calcular(){  /*   definir função de nome calcular  */
+            var velocidade = document.querySelector('#ivel')  /*   armazena o valor do elemento ID ivel na var de nome velocidade  */
+            var veloc = Number(velocidade.value)  /*   converte o valor da velocidade em número e armazena na var de nome veloc  */
+            var res = document.querySelector('#res')  /*  armazena o valor do elemento ID res na var de nome res  */
+
+            res.innerHTML = (`A velocidade aferida foi de ${veloc}Km/h`)  /*  o texto exibido no elemento ID res (var de nome res) será exibido com esta frase  */
+            
+                if(veloc > 60){  /*  se o valor armazenado e convertido na var veloc for maior que 60...   */
+                    res.innerHTML = `<p>Você está <strong>multado</strong> por excesso de velocidade!</p>`  /*  o texto apresentado no elemento ID res (var de nome res) será escrito em um novo <p> com esta frase   */    
+                }
+
+            res.innerHTML += '<p>Dirija sempre com o cinto de segurança!</p>'  /*  até o valor 60, será exibido o texto do elemento ID res (a velocidade aferida foi...) + a criação de um novo parágrafo com o texto "DIrija sempre com o cinto de segurança!"    */
+        }
+    </script>
+
+</html>
