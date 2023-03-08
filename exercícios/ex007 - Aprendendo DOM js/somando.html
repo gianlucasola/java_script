@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        body{
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            background-color: #0D1821;
+        }
+
+        main{
+            background-color: #ffd700;
+            padding: 10px;
+            border-radius: 10px;
+            height: 320px;
+            width: 250px;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        h1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            height: 30%;
+            color: #66101F;
+        }
+
+        main div{
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+        }
+
+        input{
+            border-radius: 4px;
+        }
+
+        input[type=number]{
+            height: 30px;
+            width: 90%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border: none;
+            box-shadow: 2px 2px 4px #00000034;
+            font-size: 1.1em;
+            text-indent: 6px;
+        }
+
+        input::placeholder{
+            color: #9c9a9b;
+            text-indent: 5px;
+        }
+
+        p.mais{
+            text-align: center;
+            font-size: 1.8em;
+        }
+
+        input.somar{
+            background-color: #66101F;
+            color: white;
+            height: 30px;
+            margin: 25px auto;
+            width: 165px;
+            display: block;
+            border: none;
+            font-size: 1em;
+            box-shadow: 2px 2px 4px #00000034;
+
+        }
+
+        p#result{
+            text-align: center;
+            background-color: #faf065;
+            width: 75%;
+            padding: 3px;
+            border: 1px solid #68642c;
+            box-shadow: 2px 2px 4px #00000034;
+            border-radius: 5px;
+            color: #68642c;
+            font-weight: 600;
+            margin: 10px auto 0px auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main>
+    <h1>Calculadora</h1>   
+        <div>
+            <input placeholder="Digite um número" type="number" name="txtn1" id="txtn1"> <!--  input para inserir o primeiro número  -->
+            <p class="mais">+</p>
+            <input placeholder="Digite um número" type="number" name="txtn2" id="txtn2">  <!--  input para o segundo número  -->
+            <input class="somar" type="submit" value="Somar" onclick="somar()">  <!--  ao clicar, executará a função somar  -->
+            <p id="result">Resultado</p>
+        </div>
+    </main>
+</body>
+
+    <script>
+        function somar(){  /*  definindo função de nome SOMAR  */
+            var tn1 = document.querySelector('#txtn1')  /*  var de nome tn1 se refere ao input de ID txtn1  */
+            var tn2 = document.querySelector('#txtn2')  /*  var de nome tn2 se refere ao input de ID txtn2  */
+            var res = document.querySelector('#result')  /*  var de nome res se refere a div de ID result para exibir o cálculo  */
+            
+            var n1 = Number(tn1.value)  /*  converter o valor do input txtn1 em NÚMERO   e   armazenar como var de nome n1  */
+            var n2 = Number(tn2.value)  /*  converter o valor do input txtn2 em NÚMERO   e   armazenar como var de nome n2  */
+                var s = n1 + n2  /*  var de nome s se refere a soma dos números n1 + n2  */
+
+                res.innerHTML = `Resultado: ${s}`  /*  o parágrafo para o resultado (armazenada como var res) receberá como texto "O resultado é [valor da var s (o cálculo da soma)]"  */
+        }    
+    </script>
+</html>
